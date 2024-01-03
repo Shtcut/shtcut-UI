@@ -40,6 +40,20 @@ export function pick<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
   return result;
 }
 
+/**
+ * The `deepMerge` function merges two objects deeply, recursively merging nested objects if they
+ * exist.
+ * @param target - The `target` parameter is the object that will be merged with the `source` object.
+ * It is of type `Partial<T1>`, which means it can be an object of any type `T1` or a partial object of
+ * type `T1` (i.e., an object that
+ * @param source - The `source` parameter is an object of type `Partial<T2>`, which means it is a
+ * partial representation of an object of type `T2`. It contains properties and values that you want to
+ * merge into the `target` object.
+ * @param options - The `options` parameter is an optional object that can have a property called
+ * `clone`. The `clone` property is a boolean value that determines whether the `target` object should
+ * be cloned before merging. If `clone` is set to `true`, a shallow copy of the `target` object
+ * @returns the merged object, which is the result of merging the `target` and `source` objects.
+ */
 export function deepMerge<T1, T2>(
   target: Partial<T1>,
   source: Partial<T2>,

@@ -1,0 +1,1 @@
+{"version":3,"file":"utils.js","names":["isBrowser","exports","document"],"sources":["../../src/utils.ts"],"sourcesContent":["export const isBrowser = typeof document !== 'undefined';"],"mappings":";;;;AAAO,IAAMA,SAAS,GAAAC,OAAA,CAAAD,SAAA,GAAG,OAAOE,QAAQ,KAAK,WAAW"}
