@@ -40,7 +40,7 @@
     "dependencies": {
         "clsx": "^2.1.0",
         "color-string": "^1.9.1",
-        "@shtcut-ui/utils": "^0.0.1",
+        "@shtcut-ui/utils": "^0.1.1",
         "@shtcut-ui/theme": "^0.0.1"
     },
     "peerDependencies": {

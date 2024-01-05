@@ -13,3 +13,5 @@ export type WithCSSVar<T> = T & {
 export type DeepPartials<T> = {
     [P in keyof T]?: DeepPartials<T[P]>;
 };
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type NumberSize = number | Size;

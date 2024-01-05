@@ -37,3 +37,18 @@ export declare function pick<T extends Dict, K extends keyof T>(object: T, keys:
 export declare function deepMerge<T1, T2>(target: Partial<T1>, source: Partial<T2>, options?: {
     clone: boolean;
 }): Partial<T1>;
+/**
+ * The `split` function takes an object and an array of keys, and returns two new objects - one
+ * containing the picked keys and their corresponding values, and the other containing the omitted keys
+ * and their corresponding values.
+ * @param {T} object - The `object` parameter is an object of type `T`, where `T` is a generic type
+ * that extends `Dict`. `Dict` is a type that represents a dictionary object with string keys and any
+ * value.
+ * @param {K[]} keys - The `keys` parameter is an array of keys that you want to pick from the `object`
+ * parameter. These keys should be present in the `object` parameter.
+ * @returns an array with two elements. The first element is an object that contains the properties
+ * specified in the `keys` parameter, with their corresponding values from the `object` parameter. The
+ * second element is an object that contains the remaining properties from the `object` parameter,
+ * excluding the ones specified in the `keys` parameter.
+ */
+export declare function spilt<T extends Dict, K extends keyof T>(object: T, keys: K[]): [{ [P in K]: T[P]; }, Omit<T, K>];

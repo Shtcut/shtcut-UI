@@ -11,6 +11,16 @@ export interface ThemeVars {
   cssMap: Dict;
 }
 
+/**
+ * The `createThemeVars` function takes a target object and options, and returns a context object
+ * containing CSS variables and a CSS map.
+ * @param {Dict} target - The `target` parameter is an object that contains the theme variables that
+ * you want to create. It can be any JavaScript object that represents the theme variables.
+ * @param {CreateThemeVarsOptions} options - The `options` parameter is an object that contains
+ * additional configuration options for creating theme variables. It is of type
+ * `CreateThemeVarsOptions`.
+ * @returns The function `createThemeVars` returns an object of type `ThemeVars`.
+ */
 export const createThemeVars = (target: Dict, options: CreateThemeVarsOptions) => {
   const context: ThemeVars = {
     cssVars: {},
@@ -36,6 +46,9 @@ type TokenHandler = (
   options: CreateThemeVarsOptions,
 ) => ThemeVars;
 
+/* The `tokenHandlerMap` is an object that maps different keys (of type `ThemeScale`) to corresponding
+handler functions. Each handler function takes in `keys`, `value`, and `options` as parameters and
+returns an object with `cssVars` and `cssMap` properties. */
 const tokenHandlerMap: Partial<Record<ThemeScale, TokenHandler>> & {
   defaultHandler: TokenHandler;
 } = {

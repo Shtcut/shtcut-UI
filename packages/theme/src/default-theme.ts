@@ -36,7 +36,7 @@ export const darkSchema: ColorScheme = {
   },
 };
 
-export const defaultSchema: ShtcutUiTheme = {
+export const defaultTheme: ShtcutUiTheme = {
   cursor: 'default',
   rounded: '0.375rem',
   colorSchemes: {

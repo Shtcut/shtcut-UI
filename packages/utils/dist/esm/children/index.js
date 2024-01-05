@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { Children, isValidElement } from 'react';
 
 /**
  * The function `getValidChildren` filters out invalid React elements from a given array of children.
@@ -8,6 +8,6 @@ import * as React from 'react';
  * @returns an array of valid React elements.
  */
 export function getValidChildren(children) {
-  return React.Children.toArray(children).filter(child => /*#__PURE__*/React.isValidElement(child));
+  return Children.toArray(children).filter(child => /*#__PURE__*/isValidElement(child));
 }
 //# sourceMappingURL=index.js.map

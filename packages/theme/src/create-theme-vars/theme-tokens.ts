@@ -1,9 +1,8 @@
-import { Dict, pick } from "@shtcut-ui/utils";
-
+import { Dict, pick } from '@shtcut-ui/utils';
 
 const tokens = ['colors', 'cursor', 'rounded', 'density'] as const;
 
-export type ThemeScale = | typeof tokens[number] | "transition.duration" | 'transition.property' | 'transition.easing';
+export type ThemeScale = (typeof tokens)[number] | 'transition.duration' | 'transition.property' | 'transition.easing';
 
 /**
  * The function "extractTokens" takes a theme object and returns a subset of the theme containing only
@@ -14,8 +13,8 @@ export type ThemeScale = | typeof tokens[number] | "transition.duration" | 'tran
  * array.
  */
 export function extractTokens(theme: Dict) {
-    const _tokens = (tokens as unknown) as string[];
-    return pick(theme, _tokens);
+  const _tokens = tokens as unknown as string[];
+  return pick(theme, _tokens);
 }
 
 /**
@@ -27,7 +26,6 @@ export function extractTokens(theme: Dict) {
  * and `__breakpoints` properties omitted.
  */
 export function omitVars(rawTheme: Dict) {
-    const { _cssMap, __cssVars, __breakpoints, ...cleanTheme} = rawTheme;
-    return cleanTheme;
+  const { _cssMap, __cssVars, __breakpoints, ...cleanTheme } = rawTheme;
+  return cleanTheme;
 }
-

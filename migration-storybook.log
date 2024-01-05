@@ -1,0 +1,130 @@
+🔎 checking possible migrations..
+(node:96002) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+WARN Multiple main files found in your configDir (/Users/funmiayinde/Documents/shtcut-project/shtcut-ui/.storybook).
+WARN Storybook will use the first one found and ignore the others. Please remove the extra files.
+
+🔎 found a 'new-frameworks' migration:
+╭ Automigration detected ─────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                     │
+│   We've detected your project is not fully setup with Storybook's 7 new framework format.           │
+│                                                                                                     │
+│   Storybook 7 introduced the concept of frameworks, which abstracts configuration for renderers     │
+│   (e.g. React, Vue), builders (e.g. Webpack, Vite) and defaults to make integrations easier.        │
+│                                                                                                     │
+│   Your project should be updated to use Storybook's framework: @storybook/nextjs. We can attempt    │
+│   to do this for you automatically.                                                                 │
+│                                                                                                     │
+│   Here are the steps this migration will do to migrate your project:                                │
+│   - Add the following dependencies:                                                                 │
+│   - * @storybook/nextjs                                                                             │
+│   - Update or specify the framework field in .storybook/main.ts with the value of                   │
+│   "@storybook/nextjs".                                                                              │
+│                                                                                                     │
+│                                                                                                     │
+│   To learn more about the new framework format, see:                                                │
+│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#new-framework-api                 │
+│                                                                                                     │
+│   The @storybook/nextjs package provides great user experience for Next.js users, and we highly     │
+│   recommend you to read more about it at                                                            │
+│   https://github.com/storybookjs/storybook/blob/next/code/frameworks/nextjs/README.md               │
+│                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'new-frameworks' migration on your project? › (Y/n)✔ Do you want to run the 'new-frameworks' migration on your project? … yes
+✅ Installing new dependencies: @storybook/nextjs
+
+An error occurred while installing dependencies:
+NPM error ETARGET - Package target not found.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running new-frameworks migration
+HandledError: Error: NPM error ETARGET - Package target not found.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:55:75)
+    at async Object.run (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:278:755)
+    ... 2 lines matching cause stack trace ...
+    at async Command.<anonymous> (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:496:2853) {
+  handled: true,
+  cause: Error: NPM error ETARGET - Package target not found.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:57:8157)
+      at async NPMProxy.addDependencies (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:54:928)
+      at async Object.run (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:278:755)
+      at async runFixes (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:417:1444)
+      at async automigrate (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:412:669)
+      at async Command.<anonymous> (/Users/funmiayinde/.npm/_npx/eb8bf615e50a412a/node_modules/@storybook/cli/dist/generate.js:496:2853)
+}
+
+
+🔎 found a 'incompatible-addons' migration:
+╭ Manual migration detected ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                     │
+│   Attention: We've detected that you're using the following addons in versions which are known to   │
+│   be incompatible with Storybook 7:                                                                 │
+│                                                                                                     │
+│   - @storybook/addon-postcss@2.0.0                                                                  │
+│                                                                                                     │
+│   Please be aware they might not work in Storybook 7. Reach out to their maintainers for updates    │
+│   and check the following Github issue for more information:                                        │
+│   https://github.com/storybookjs/storybook/issues/20529                                             │
+│                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+🔎 found a 'autodocsTrue' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                    │
+│   We've changed the configuration of autodocs (previous docsPage), so now the value:               │
+│     - docs.autodocs: true -- means automatically create docs for every CSF file                    │
+│     - docs.autodocs: 'tag' -- means only create autodocs for CSF files with the 'autodocs' tag     │
+│     - docs.autodocs: false -- means never create autodocs                                          │
+│                                                                                                    │
+│   Based on your prior configuration,  we can set the `docs.autodocs` to keep your old behaviour:   │
+│                                                                                                    │
+│   docs: { autodocs: true }                                                                         │
+│                                                                                                    │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#autodocs-changes      │
+│                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'autodocsTrue' migration on your project? › (Y/n)✔ Do you want to run the 'autodocsTrue' migration on your project? … yes
+✅ Setting 'docs.autodocs' to true in main.js
+✅ ran autodocsTrue migration
+WARN An issue occurred while trying to find dependencies metadata using npm.
+
+╭ Migration check ran with failures ──────────────────────────────────────────────────────────────────╮
+│                                                                                                     │
+│   Successful migrations:                                                                            │
+│                                                                                                     │
+│   autodocsTrue                                                                                      │
+│                                                                                                     │
+│   Failed migrations:                                                                                │
+│                                                                                                     │
+│   new-frameworks:                                                                                   │
+│   Error: NPM error ETARGET - Package target not found.                                              │
+│                                                                                                     │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.          │
+│                                                                                                     │
+│   You can find the full logs in                                                                     │
+│   /Users/funmiayinde/Documents/shtcut-project/shtcut-ui/migration-storybook.log                     │
+│                                                                                                     │
+│   Manual migrations:                                                                                │
+│                                                                                                     │
+│   incompatible-addons                                                                               │
+│                                                                                                     │
+│   ─────────────────────────────────────────────────                                                 │
+│                                                                                                     │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook@next           │
+│   automigrate'                                                                                      │
+│                                                                                                     │
+│   The automigrations try to migrate common patterns in your project, but might not contain          │
+│   everything needed to migrate to the latest version of Storybook.                                  │
+│                                                                                                     │
+│   Please check the changelog and migration guide for manual migrations and more information:        │
+│   https://storybook.js.org/migration-guides/7.0                                                     │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                           │
+│                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

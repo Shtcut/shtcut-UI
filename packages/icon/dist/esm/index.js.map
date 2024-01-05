@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","names":[],"sources":["../../src/index.tsx"],"sourcesContent":["export * from './icon';\nexport * from './core';"],"mappings":"AAAA,cAAc,QAAQ;AACtB,cAAc,QAAQ"}

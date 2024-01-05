@@ -1,4 +1,4 @@
-import * as React from 'react';
+/// <reference types="react" />
 /**
  * The function `getValidChildren` filters out invalid React elements from a given array of children.
  * @param children - The `children` parameter is of type `React.ReactNode`, which is a type that
@@ -6,4 +6,4 @@ import * as React from 'react';
  * element, a string, a number, or an array of React nodes.
  * @returns an array of valid React elements.
  */
-export declare function getValidChildren(children: React.ReactNode): React.ReactElement<any, string | React.JSXElementConstructor<any>>[];
+export declare function getValidChildren(children: React.ReactNode): import("react").ReactElement<any, string | import("react").JSXElementConstructor<any>>[];

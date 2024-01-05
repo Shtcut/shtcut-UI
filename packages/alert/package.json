@@ -34,12 +34,12 @@
         "lint:types": "tsc --noEmit"
     },
     "devDependencies": {
-        "@types/color-string": "^1.5.5",
         "react": "^18.2.0"
     },
     "dependencies": {
-        "clsx": "^2.1.0",
-        "color-string": "^1.9.1"
+        "@shtcut-ui/utils": "^0.1.1",
+        "@shtcut-ui/theme": "^0.0.1",
+        "@shtcut-ui/icon": "^0.0.1"
     },
     "peerDependencies": {
         "react": ">=16.8.6"

@@ -5,6 +5,9 @@ let warned = false;
 export const colors = {
   black: "#000",
   white: "#fff",
+  inherit: 'inherit',
+  current: 'currentColor',
+  transparent: 'transparent',
   rose: {
     50: "#fff1f2",
     100: "#ffe4e6",
