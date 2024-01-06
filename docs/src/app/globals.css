@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.prose hr {
+  @apply my-4;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

@@ -1,5 +1,5 @@
 ## Installation
 
 ```sh
-yarn add @shtcut-ui/theme
+yarn add @shtcut-ui/core
 ```
