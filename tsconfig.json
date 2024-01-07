@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["esnext", "dom"],
+    "target": "ESNext",
+    "lib": ["esnext", "dom", "DOM.Iterable"],
     "declaration": true,
     "sourceMap": true,
     "allowJs": true,

@@ -1,9 +1,12 @@
-const colors = require("tailwindcss/colors");
+/** @type {import('tailwindcss').Config} */
 
-const config = {
-  mode: "jit",
-  purge: ["./public/**/*.html", "./packages/*/**/*.{js,jsx,ts,tsx,vue}"],
-  darkMode: "class",
+const colors = require('tailwindcss/colors');
+
+module.exports = {
+  presets: [require('./packages/twind/tailwind.config.cjs')],
+  mode: 'jit',
+  purge: ['./public/**/*.html', './packages/*/**/*.{js,jsx,ts,tsx,vue}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -11,12 +14,14 @@ const config = {
       },
     },
   },
+  variants: {
+    extend: {},
+  },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("./packages/core")({
-      colors: ["blue"],
+    require('@tailwindcss/forms'),
+    require('./packages/core')({
+      colors: ['blue'],
       cssBase: true,
     }),
   ],
 };
-export default config;

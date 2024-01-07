@@ -5,6 +5,7 @@
   "workspaces": {
     "packages": [
       "packages/*",
+      "toolings/*",
       "docs"
     ]
   },
@@ -16,6 +17,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "prepare": "husky install",
     "clean": "learn clean --yes && rm -rf node_modules",
     "clean-dist": "yarn lerna exec -- rimraf dist",
     "prestart": "yarn && yarn bootstrap",
@@ -73,5 +75,16 @@
     "storybook-addon-performance": "^0.17.1",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "tsup": "^8.0.1"
   }
 }

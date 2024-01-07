@@ -15,22 +15,22 @@ function buildDistFile(filename) {
     }),
     require('autoprefixer'),
   ])
-    .process('@tailwind components;', {
-      from: null,
-      to: `./dist/${filename}.css`,
-      map: false,
-    })
-    .then((result) => {
-      fs.writeFileSync(`./dist/${filename}.css`, result.css);
-      return result;
-    })
-    .then((result) => {
-      const minified = new ClassCss().minify(result.css);
-      fs.writeFileSync(`./dist/${filename}.min.css`, minified.styles);
-    })
-    .catch((err) => {
-      console.log('compile-err', err);
-    });
+    // .process('@tailwind components;', {
+    //   from: null,
+    //   to: `./dist/${filename}.css`,
+    //   map: false,
+    // })
+    // .then((result) => {
+    //   fs.writeFileSync(`./dist/${filename}.css`, result.css);
+    //   return result;
+    // })
+    // .then((result) => {
+    //   const minified = new ClassCss().minify(result.css);
+    //   fs.writeFileSync(`./dist/${filename}.min.css`, minified.styles);
+    // })
+    // .catch((err) => {
+    //   console.log('compile-err', err);
+    // });
   // return Promise.resolve();
 }
 
@@ -38,4 +38,4 @@ console.info('Wrapping up CSS....');
 
 Promise.all([buildDistFile('shtcut-ui')]).then(() => {
   console.log('Finished wrapping up CSS');
-});
+}).catch((e) => console.log('shtcut-ui-css-err::', e));

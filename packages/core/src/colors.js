@@ -1,7 +1,7 @@
 const withOpacity = require('./with-opacity');
 
 const weights = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
-const reduceWithOpacityAndColor = (color: string) =>
+const reduceWithOpacityAndColor = (color) =>
   weights.reduce((acc, num) => {
     acc[num] = withOpacity(`--sht-colors-${color}-${num}`);
     return acc;
