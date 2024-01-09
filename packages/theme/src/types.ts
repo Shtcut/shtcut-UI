@@ -184,7 +184,7 @@ export type ShtcutTheme = BaseTheme & {
   divideColor: BaseThemeColor;
   divideOpacity: DictString;
   divideWidth: DictString;
-  dropShadow: DictString;
+  dropShadow: DictMaybeArray;
 
   fill: BaseThemeColor;
   flex: DictString;
@@ -209,7 +209,7 @@ export type ShtcutTheme = BaseTheme & {
   gridTemplateColumns: DictString;
   gridTemplateRows: DictString;
 
-  height: DictString;
+  height: Record<string, string>;
   hueRotate: DictString;
 
   inset: DictString;
@@ -263,7 +263,7 @@ export type ShtcutTheme = BaseTheme & {
   textOpacity: DictString;
   textUnderlineOffset: DictString;
   transformOrigin: DictString;
-  transitionDelay: DictString;
+  transitionDelay: DictMaybeArray;
   transitionDuration: DictString;
   transitionProperty: DictString;
   transitionTimingFunction: DictString;

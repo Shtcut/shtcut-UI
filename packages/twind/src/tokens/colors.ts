@@ -1,10 +1,11 @@
-export default {
+export const colors =  {
   inherit: 'inherit',
   current: 'currentColor',
   transparent: 'transparent',
 
   black: '#1C2B36',
   white: '#ffffff',
+  border: 'hsl(var(--background)',
 
   gray: {
     50: '#F2F5F7',
@@ -70,4 +71,5 @@ export default {
     800: '#38251B',
     900: '#1C1613',
   },
+
 };
